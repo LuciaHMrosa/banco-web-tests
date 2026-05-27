@@ -1,0 +1,59 @@
+# language: pt
+@login
+Funcionalidade: Login
+
+  Contexto:
+    Dado que usuario acessou http://localhost:4000
+    E que o usuário esteja na tela de login
+
+  @positivo
+  Cenário: Realizar login com credenciais válidas (usuario julio.lima)
+    Quando informar o usuário "julio.lima"
+    E informar a senha "123456"
+    E solicitar autenticação
+    Então o sistema deve autenticar o usuário com sucesso
+
+  @positivo
+  Cenário: Realizar login com segundo usuário válido (usuario junior.lima)
+    Quando informar o usuário "junior.lima"
+    E informar a senha "123456"
+    E solicitar autenticação
+    Então o sistema deve autenticar o usuário com sucesso
+
+  @negativo
+  Cenário: Exibir mensagem ao não informar usuário
+    Quando informar apenas a senha
+    E solicitar autenticação
+    Então o sistema deve exibir mensagem de campos obrigatórios
+
+  @negativo
+  Cenário: Exibir mensagem ao não informar senha
+    Quando informar apenas o usuário
+    E solicitar autenticação
+    Então o sistema deve exibir mensagem de campos obrigatórios
+
+  @negativo
+  Cenário: Exibir mensagem ao não informar usuário e senha
+    Quando não informar usuário e senha
+    E solicitar autenticação
+    Então o sistema deve exibir mensagem de campos obrigatórios
+
+  @negativo
+  Cenário: Exibir mensagem ao informar usuário inválido
+    Quando informar usuário inválido
+    E informar senha válida
+    E solicitar autenticação
+    Então o sistema deve exibir mensagem de credenciais inválidas
+
+  @negativo
+  Cenário: Exibir mensagem ao informar senha inválida
+    Quando informar usuário válido
+    E informar senha inválida
+    E solicitar autenticação
+    Então o sistema deve exibir mensagem de credenciais inválidas
+
+  @negativo
+  Cenário: Exibir mensagem ao informar usuário e senha inválidos
+    Quando informar usuário e senha inválidos
+    E solicitar autenticação
+    Então o sistema deve exibir mensagem de credenciais inválidas
