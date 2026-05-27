@@ -11,6 +11,7 @@ Este repositório foi criado com o objetivo de praticar diferentes abordagens de
 - Testes manuais
 - Escrita de cenários BDD com Gherkin
 - Testes exploratórios
+- Análise e design de testes
 - Automação de testes E2E com Cypress
 - Organização de massa de testes
 - Geração de relatórios automatizados
@@ -25,6 +26,7 @@ Este projeto tem como objetivo praticar diferentes abordagens de testes aplicada
 O projeto contempla:
 
 - Planejamento de testes
+- Análise de funcionalidades
 - Escrita de casos de teste
 - Aplicação de técnicas de teste
 - Escrita de cenários BDD
@@ -50,6 +52,9 @@ Casos de teste estruturados seguindo o padrão ISO 29119-3.
 ## 🔹 Testes Exploratórios
 Sessões exploratórias utilizando heurísticas e Session-Based Test Management (SBTM).
 
+## 🔹 Análise e Design de Testes
+Documentação de análise funcional, técnicas de design de testes, tabelas de decisão e levantamento de cenários.
+
 ## 🔹 Mochawesome Reporter
 Responsável pela geração de relatórios HTML detalhados da automação.
 
@@ -67,6 +72,7 @@ banco-web-tests/
 │   └── reports/              # Relatórios HTML
 │
 ├── manual/
+│   ├── analise/              # Análise e design de testes
 │   ├── casos-de-teste/       # Casos de teste ISO 29119-3
 │   ├── gherkin/              # Cenários BDD
 │   ├── exploratorio/         # Relatórios de sessões exploratórias
@@ -85,10 +91,67 @@ banco-web-tests/
 
 Cobertura atual da funcionalidade:
 
+- Análise e design de testes
 - Casos de teste manuais
 - Cenários BDD em Gherkin
 - Sessões de testes exploratórios
 - Testes automatizados com Cypress
+
+---
+
+# 🧠 Análise de Testes
+
+Os documentos de análise e design de testes estão organizados em:
+
+```txt
+manual/analise/
+```
+
+Contendo:
+
+- levantamento de cenários
+- entradas e validações
+- técnicas de design de testes
+- tabelas de decisão
+- estratégias exploratórias
+
+---
+
+# 🧪 Testes Manuais
+
+Os casos de teste manuais estão organizados em:
+
+```txt
+manual/casos-de-teste/
+```
+
+Os documentos seguem o padrão ISO 29119-3.
+
+---
+
+# 🥒 BDD / Gherkin
+
+Os cenários escritos em Gherkin estão disponíveis em:
+
+```txt
+manual/gherkin/
+```
+
+---
+
+# 🔍 Testes Exploratórios
+
+Os relatórios das sessões exploratórias estão organizados em:
+
+```txt
+manual/exploratorio/
+```
+
+Utilizando:
+
+- heurísticas de testes
+- Session-Based Test Management
+- charters exploratórios
 
 ---
 
@@ -198,44 +261,6 @@ Ações relacionadas às transferências.
 
 ---
 
-# 🧪 Testes Manuais
-
-Os casos de teste manuais estão organizados em:
-
-```txt
-manual/casos-de-teste/
-```
-
-Os documentos seguem o padrão ISO 29119-3.
-
----
-
-# 🥒 BDD / Gherkin
-
-Os cenários escritos em Gherkin estão disponíveis em:
-
-```txt
-manual/gherkin/
-```
-
----
-
-# 🔍 Testes Exploratórios
-
-Os relatórios das sessões exploratórias estão organizados em:
-
-```txt
-manual/exploratorio/
-```
-
-Utilizando:
-
-- heurísticas de testes
-- Session-Based Test Management
-- charters exploratórios
-
----
-
 # ⚠️ Observações
 
 - Certifique-se de que a API e a aplicação estejam rodando antes da execução.
@@ -252,6 +277,8 @@ cypress/fixtures/
 Projeto desenvolvido com foco em aprendizado prático de Qualidade de Software, contemplando:
 
 - testes manuais
+- análise e design de testes
 - automação
 - BDD
 - testes exploratórios
+- organização de QA em projetos reais
