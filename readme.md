@@ -1,65 +1,118 @@
 # 🧪 banco-web-tests
 
-Este projeto tem como objetivo demonstrar para os alunos da **Mentoria 2.0** como automatizar testes de aplicações web utilizando **Cypress** e **JavaScript**, aplicando boas práticas de organização e reutilização de código.
+Projeto voltado para estudos e práticas de Qualidade de Software (QA), utilizando a aplicação Banco Web desenvolvida pelo professor Júlio de Lima durante a Mentoria 2.0.
+
+Repositório original da aplicação:
+
+- Banco Web: https://github.com/juliodelima/banco-web
+
+Este repositório foi criado com o objetivo de praticar diferentes abordagens de testes aplicadas à aplicação Banco Web, incluindo:
+
+- Testes manuais
+- Escrita de cenários BDD com Gherkin
+- Testes exploratórios
+- Automação de testes E2E com Cypress
+- Organização de massa de testes
+- Geração de relatórios automatizados
+- Boas práticas de QA
 
 ---
 
-## 🎯 Objetivo
+# 🎯 Objetivo
 
-Automatizar cenários de testes para a aplicação **Banco Web**, utilizando:
+Este projeto tem como objetivo praticar diferentes abordagens de testes aplicadas à aplicação Banco Web, simulando atividades realizadas por profissionais de QA em ambientes reais.
 
-* Boas práticas de automação
-* Organização de código
-* Comandos customizados
-* Geração de relatórios
+O projeto contempla:
 
-👉 Servindo como referência didática para alunos de QA.
+- Planejamento de testes
+- Escrita de casos de teste
+- Aplicação de técnicas de teste
+- Escrita de cenários BDD
+- Testes exploratórios
+- Automação de testes
+- Organização de evidências e documentação
 
----
-
-## 🧩 Componentes do Projeto
-
-* **Cypress**
-  Framework principal para automação de testes end-to-end.
-
-* **Custom Commands**
-  Comandos personalizados para reutilização de lógica, localizados em:
-  `cypress/support/commands/`
-
-* **cypress-mochawesome-reporter**
-  Responsável pela geração de relatórios HTML detalhados.
+👉 Servindo como ambiente de prática e evolução em Qualidade de Software.
 
 ---
 
-## 📁 Estrutura de Pastas
+# 🧩 Componentes do Projeto
 
-```
-cypress/
+## 🔹 Cypress
+Framework utilizado para automação de testes end-to-end.
+
+## 🔹 Gherkin / BDD
+Especificação de cenários baseada em comportamento utilizando linguagem Gherkin.
+
+## 🔹 Testes Manuais
+Casos de teste estruturados seguindo o padrão ISO 29119-3.
+
+## 🔹 Testes Exploratórios
+Sessões exploratórias utilizando heurísticas e Session-Based Test Management (SBTM).
+
+## 🔹 Mochawesome Reporter
+Responsável pela geração de relatórios HTML detalhados da automação.
+
+---
+
+# 📁 Estrutura de Pastas
+
+```txt
+banco-web-tests/
 │
-├── e2e/              # Scripts de testes automatizados
-├── fixtures/         # Dados de apoio (massa de teste)
-├── support/          # Configurações e comandos customizados
-├── reports/          # Relatórios gerados após execução
+├── cypress/
+│   ├── e2e/                  # Scripts de automação
+│   ├── fixtures/             # Massa de dados
+│   ├── support/              # Configurações e comandos customizados
+│   └── reports/              # Relatórios HTML
+│
+├── manual/
+│   ├── casos-de-teste/       # Casos de teste ISO 29119-3
+│   ├── gherkin/              # Cenários BDD
+│   ├── exploratorio/         # Relatórios de sessões exploratórias
+│   └── evidencias/           # Evidências de testes
+│
+├── package.json
+├── cypress.config.js
+└── README.md
 ```
 
 ---
 
-## ⚙️ Pré-requisitos
+# 🧪 Cobertura Atual
 
-Antes de começar, você precisa ter:
+## ✔ Funcionalidade: Login
 
-* Node.js instalado
-* API do projeto rodando
-* Aplicação Web rodando
+Cobertura atual da funcionalidade:
+
+- Casos de teste manuais
+- Cenários BDD em Gherkin
+- Sessões de testes exploratórios
+- Testes automatizados com Cypress
 
 ---
 
-## 🚀 Instalação
+# ⚙️ Pré-requisitos
+
+Antes de executar o projeto, é necessário possuir:
+
+- Node.js instalado
+- API Banco rodando
+- Aplicação Banco Web rodando
+
+---
+
+# 🚀 Instalação
 
 Clone o repositório:
 
 ```bash
 git clone https://github.com/juliodelimas/banco-web-tests.git
+```
+
+Acesse a pasta:
+
+```bash
 cd banco-web-tests
 ```
 
@@ -71,25 +124,21 @@ npm install
 
 ---
 
-## ▶️ Execução dos Testes
+# ▶️ Execução dos Testes Automatizados
 
-### 🔹 Rodar em modo headless (sem interface)
+## 🔹 Rodar em modo headless
 
 ```bash
 npm test
 ```
 
----
-
-### 🔹 Abrir interface do Cypress
+## 🔹 Abrir interface do Cypress
 
 ```bash
 npm run cy:open
 ```
 
----
-
-### 🔹 Rodar com navegador visível
+## 🔹 Rodar com navegador visível
 
 ```bash
 npm run cy:headed
@@ -97,60 +146,112 @@ npm run cy:headed
 
 ---
 
-## 📊 Relatórios
+# 📊 Relatórios
 
-Após a execução dos testes, o relatório HTML estará disponível em:
+Após a execução dos testes automatizados, os relatórios HTML estarão disponíveis em:
 
-```
+```txt
 cypress/reports/html/index.html
 ```
 
-👉 Basta abrir no navegador.
+👉 Basta abrir o arquivo no navegador.
 
 ---
 
-## 🧪 Estrutura dos Testes
+# 🧪 Estrutura dos Testes Automatizados
 
-* `cypress/e2e/login.cy.js`
-  → Testes de login
+```txt
+cypress/e2e/login.cy.js
+```
 
-* `cypress/e2e/transferencia.cy.js`
-  → Testes de transferência bancária
+Responsável pelos testes automatizados da funcionalidade de login.
+
+```txt
+cypress/e2e/transferencia.cy.js
+```
+
+Responsável pelos testes automatizados de transferência bancária.
 
 ---
 
-## 🔧 Custom Commands
+# 🔧 Custom Commands
 
 Os comandos customizados estão organizados em:
 
-* `cypress/support/commands/common.js`
-  → Comandos utilitários
+```txt
+cypress/support/commands/common.js
+```
 
-* `cypress/support/commands/login.js`
-  → Ações de login
+Comandos utilitários.
 
-* `cypress/support/commands/transferencia.js`
-  → Ações de transferência
+```txt
+cypress/support/commands/login.js
+```
 
-👉 Para usar:
+Ações relacionadas ao login.
 
-```js
-cy.nomeDoComando()
+```txt
+cypress/support/commands/transferencia.js
+```
+
+Ações relacionadas às transferências.
+
+---
+
+# 🧪 Testes Manuais
+
+Os casos de teste manuais estão organizados em:
+
+```txt
+manual/casos-de-teste/
+```
+
+Os documentos seguem o padrão ISO 29119-3.
+
+---
+
+# 🥒 BDD / Gherkin
+
+Os cenários escritos em Gherkin estão disponíveis em:
+
+```txt
+manual/gherkin/
 ```
 
 ---
 
-## ⚠️ Observações
+# 🔍 Testes Exploratórios
 
-* Certifique-se de que a API e a aplicação web estejam rodando antes de executar os testes.
-* Os dados de acesso estão em:
+Os relatórios das sessões exploratórias estão organizados em:
 
+```txt
+manual/exploratorio/
 ```
+
+Utilizando:
+
+- heurísticas de testes
+- Session-Based Test Management
+- charters exploratórios
+
+---
+
+# ⚠️ Observações
+
+- Certifique-se de que a API e a aplicação estejam rodando antes da execução.
+- Os dados de acesso utilizados nos testes estão disponíveis em:
+
+```txt
 cypress/fixtures/
 ```
 
 ---
 
-## 🎓 Mentoria 2.0
+# 🎓 Objetivo Educacional
 
-Projeto desenvolvido como apoio didático para aprendizado de **Automação de Testes com Cypress**.
+Projeto desenvolvido com foco em aprendizado prático de Qualidade de Software, contemplando:
+
+- testes manuais
+- automação
+- BDD
+- testes exploratórios
