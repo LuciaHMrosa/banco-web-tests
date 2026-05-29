@@ -4,7 +4,7 @@ Projeto voltado para estudos e práticas de Qualidade de Software (QA), utilizan
 
 Repositório original da aplicação:
 
-- Banco Web: https://github.com/juliodelima/banco-web
+- Banco Web: https://github.com/juliodelimas/banco-web
 
 Este repositório foi criado com o objetivo de praticar diferentes abordagens de testes aplicadas à aplicação Banco Web, incluindo:
 
