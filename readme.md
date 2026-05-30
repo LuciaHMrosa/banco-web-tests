@@ -9,7 +9,7 @@ Repositório original da aplicação:
 
 ## 🎯 Objetivo
 
-Automatizar cenários de testes para a aplicação **Banco Web**, utilizando boas práticas de organização, customização de comandos e geração de relatórios, servindo como referência didática para alunos de QA.
+Automatizar cenários de testes para a aplicação **Banco Web**, utilizando boas práticas de organização, customização de comandos e geração de relatórios.
 
 O foco do projeto é:
 
