@@ -1,5 +1,7 @@
 Cypress.Commands.add('verificarMensagemNoToast', (mensagem) => {
-    cy.get('.toast').should('have.text', mensagem)
+    cy.get('.toast')
+        .should('be.visible')
+        .and('have.text', mensagem)
 })
 
 Cypress.Commands.add('selecionarOpcaoNaCombobox', (labelDoCampo, opcao) => {
