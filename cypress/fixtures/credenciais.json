@@ -1,10 +1,11 @@
 {
-    "valida": {
-        "usuario": "julio.lima",
-        "senha": "123456"
+    "usuarios": {
+        "valido": "julio.lima",
+        "valido2": "junior.lima",
+        "invalido": "usuario.invalido"
     },
-    "invalida": {
-        "usuario": "julio.lima",
-        "senha": "654321"
+    "senhas": {
+        "valida": "123456",
+        "invalida": "654321"
     }
 }

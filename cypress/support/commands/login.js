@@ -1,16 +1,15 @@
-Cypress.Commands.add('fazerLogincomCredenciaisValidas', () => {
-    cy.fixture('credenciais').then(credenciais => {
-        cy.get('#username').click().type(credenciais.valida.usuario)
-        cy.get('#senha').click().type(credenciais.valida.senha)
-    })
+Cypress.Commands.add('FazerLogin', (usuario, senha) => {
+    if (usuario) {
+        cy.get('#username').type(usuario)
+    }
+    if (senha) {
+        cy.get('#senha').type(senha)
+    }
     cy.contains('button', 'Entrar').click()
 })
 
-Cypress.Commands.add('fazerLogincomCredenciaisInvalidas', () => {
-    //act
-    cy.fixture('credenciais').then(credenciais => {
-        cy.get('#username').click().type(credenciais.invalida.usuario)
-        cy.get('#senha').click().type(credenciais.invalida.senha)
+Cypress.Commands.add('fazerLogincomCredenciaisValidas', () => {
+    cy.fixture('credenciais').then((credenciais) => {
+        cy.FazerLogin(credenciais.usuarios.valido, credenciais.senhas.valida)
     })
-    cy.contains('button', 'Entrar').click()
 })
